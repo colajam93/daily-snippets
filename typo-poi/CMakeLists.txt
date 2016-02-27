@@ -1,0 +1,30 @@
+cmake_minimumrequired(VERSION 3.0)
+add_definitions(
+  "-std=c++14"
+)
+include_directories(
+  src
+)
+link_directories(
+  ~/develop/clang+llvm-3.7.0-x86_64-apple-darwin/
+)
+add_executable(Main
+  src/consolecolor.cpp
+  src/consolecolor.h
+  src/editdistance.cpp
+  src/editdistance.h
+  src/main.cpp
+  src/spellcheck-mac.mm
+  src/spellcheck-win.cpp
+  src/spellcheck.h
+  src/typo.cpp
+  src/typo.h
+  src/utf8.cpp
+  src/utf8.h
+  src/worddiff.cpp
+  src/worddiff.h
+  src/wordsegmenter.cpp
+  src/wordsegmenter.h
+  src/thirdparty/ConvertUTF.c
+  src/thirdparty/ConvertUTF.h
+)
